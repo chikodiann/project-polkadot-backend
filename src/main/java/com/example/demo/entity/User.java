@@ -15,6 +15,10 @@ public class User {
     private String email;
     private String password;
     private String walletAddress;
+    private String profilePicture;
+    private String bio;
+    private String SocialMediaLinks;
+
 
 
 }

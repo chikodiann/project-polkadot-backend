@@ -1,5 +1,6 @@
 package com.example.demo.entity;
 
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -11,7 +12,11 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @Data
 @Builder
+@Entity
+@Table(name = "purchases")
 public class Purchase {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String purchaseId;
     private  String userId;
     private String contentId;

@@ -1,26 +1,18 @@
-package com.example.demo.entity;
+package com.example.demo.DTO;
 
-import jakarta.persistence.*;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@NoArgsConstructor
 @AllArgsConstructor
+@NoArgsConstructor
 @Builder
 @Data
-@Entity
-@Table(name = "users")
-public class User {
-    @Id
-    @GeneratedValue(strategy = GenerationType.UUID)
-    @Column(unique = true,nullable = false)
+public class UserDTO {
     private String walletAddress;
     private String profilePicture;
     private String bio;
     private String SocialMediaLinks;
-
-
-
 }

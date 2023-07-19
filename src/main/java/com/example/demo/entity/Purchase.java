@@ -16,7 +16,7 @@ import java.time.LocalDateTime;
 @Table(name = "purchases")
 public class Purchase {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.UUID)
     private String purchaseId;
     private  String userId;
     private String contentId;

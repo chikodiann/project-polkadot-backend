@@ -15,7 +15,7 @@ import lombok.NoArgsConstructor;
 @Table(name = "contents")
 public class Content {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.UUID)
     private String contentId;
     private ContentType contentType;
     private String content;

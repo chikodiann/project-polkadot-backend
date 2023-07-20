@@ -2,12 +2,12 @@ package com.example.demo.entity;
 
 import com.example.demo.enums.ContentType;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
+
+import java.util.List;
 
 @AllArgsConstructor
+@RequiredArgsConstructor
 @NoArgsConstructor
 @Builder
 @Data
@@ -17,10 +17,28 @@ public class Content {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private String contentId;
+    @Enumerated(EnumType.STRING)
     private ContentType contentType;
+
+    @Column(nullable = false)
     private String content;
-    private int price;
+
+    @Column(nullable = false)
+    private int price; // Add the price attribute to store the content price
+
+    @Column(nullable = false)
     private String filePath;
+
+    @Column(nullable = false)
     private String contentDescription;
-    private String contentCreator; //take the wallet address of the creator upon upload
+
+    @Column(nullable = false)
+    private String contentCreator; // Take the wallet address of the creator upon upload
+
+    private boolean purchased;
+    private String transactionDetails;
+
+    @OneToMany(mappedBy = "content")
+    private List<UserPurchase> purchases;
+
 }

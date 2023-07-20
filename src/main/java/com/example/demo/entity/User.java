@@ -1,12 +1,12 @@
 package com.example.demo.entity;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
+
+import java.util.List;
 
 @NoArgsConstructor
+@RequiredArgsConstructor
 @AllArgsConstructor
 @Builder
 @Data
@@ -17,9 +17,12 @@ public class User {
     @GeneratedValue(strategy = GenerationType.UUID)
     @Column(unique = true,nullable = false)
     private String walletAddress;
-    private String profilePicture;
-    private String bio;
-    private String SocialMediaLinks;
+
+    @OneToMany(mappedBy = "user")
+    private List<UserPurchase> purchases;
+//    private String profilePicture;
+//    private String bio;
+//    private String SocialMediaLinks;
 
 
 

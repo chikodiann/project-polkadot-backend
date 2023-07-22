@@ -132,4 +132,8 @@ public class ContentService {
         }
         return contentItemDtoList;
     }
+
+    public boolean processPaymentNotification(String transactionId, double amount, String paymentMethod) {
+        return false;
+    }
 }

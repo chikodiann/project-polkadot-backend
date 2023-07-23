@@ -18,7 +18,6 @@ public class Purchase {
     @JoinColumn(name = "user_id", nullable = false)
     private User user;
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "content_id", nullable = false)
     private Content content;
     @Column(nullable = false)
     private  String transactionDetails; //this should be transaction hash on the blockchain
@@ -29,5 +28,6 @@ public class Purchase {
     private String paymentMethod; //via token transfer
     @Column(nullable = false)
     private String paymentStatus;
+    private  Long contentId;
 
 }

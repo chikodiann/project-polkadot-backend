@@ -17,15 +17,11 @@ import java.time.LocalDateTime;
 public class UserContentAccess {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    private Long contentId;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id", nullable = false)
     private User user;
-
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "contentId", nullable = false)
-    private Content content;
 
     @Column(nullable = false)
     private LocalDateTime accessExpiration;

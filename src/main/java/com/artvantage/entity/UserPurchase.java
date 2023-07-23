@@ -1,36 +1,18 @@
 package com.artvantage.entity;
 
-import jakarta.persistence.*;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 import lombok.*;
 
 import java.io.Serializable;
-import java.time.LocalDateTime;
-
-@AllArgsConstructor
-@NoArgsConstructor
-@Builder
-@Data
 @Entity
-@IdClass(UserPurchaseId.class)
-@Table(name = "user_purchases")
+@AllArgsConstructor
 public class UserPurchase implements Serializable {
 
     @Id
-    @JoinColumn(name = "user_id", referencedColumnName = "walletAddress")
-    private String walletAddress;
+    private String userId;
 
-    @Id
-    @JoinColumn(name = "contentId")
-    private String purchaseId;
+    public UserPurchase() {
+    }
 
-    @ManyToOne
-    @JoinColumn(name = "user_id", referencedColumnName = "walletAddress", insertable = false, updatable = false)
-    private User user;
-
-    @ManyToOne
-    @JoinColumn(name = "contentId", insertable = false, updatable = false)
-    private Content content;
-
-    private LocalDateTime purchaseDate;
 }
-

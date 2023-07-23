@@ -12,7 +12,7 @@ import lombok.RequiredArgsConstructor;
 @Builder
 @Data
 public class UploadedFile {
-    private String id;
+    private String contentId;
     private String filename;
     private String contentType;
     private long size;

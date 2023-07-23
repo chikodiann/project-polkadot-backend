@@ -16,6 +16,7 @@ public class UploadedFileDto {
     private long size;
 
 
+    public UploadedFileDto(String s) {
 
-
+    }
 }

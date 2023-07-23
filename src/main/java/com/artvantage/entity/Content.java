@@ -10,14 +10,17 @@ import java.util.List;
 
 @AllArgsConstructor
 @NoArgsConstructor
-@Builder
 @Data
 @Entity
+@Getter
+@Setter
 @Table(name = "contents")
-public class Content {
+public abstract class Content {
+
     @Id
-    @GeneratedValue(strategy = GenerationType.UUID)
+    @Column(name = "content_id")
     private String contentId;
+
     @Enumerated(EnumType.STRING)
     private ContentType contentType;
 
@@ -38,11 +41,12 @@ public class Content {
 
     private boolean purchased;
     private String transactionDetails;
+//
+//    @OneToMany(mappedBy = "content")
+//    private List<UserPurchase> purchases;
 
-    @OneToMany(mappedBy = "content")
-    private List<UserPurchase> purchases;
+    public abstract Object getSpecificAttribute();
+    public abstract void setSpecificAttribute(String specificAttribute);
 
-    private String streamId;
-    private String query;
 
 }

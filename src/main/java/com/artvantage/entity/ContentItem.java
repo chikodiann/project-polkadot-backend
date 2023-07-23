@@ -11,7 +11,7 @@ import lombok.RequiredArgsConstructor;
 @Builder
 @Data
 public class ContentItem {
-    private String contentId;
+    private Long contentId;
     private ContentType contentType;
     private String content;
     private int price;

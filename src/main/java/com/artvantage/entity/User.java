@@ -11,12 +11,14 @@ import java.util.List;
 @Entity
 @Table(name = "users")
 public class User {
+
     @Id
-    @Column(name = "walletAddress", unique = true,nullable = false)
+    @Column(name = "wallet_address")
     private String walletAddress;
 
-    @OneToMany(mappedBy = "user")
-    private List<UserPurchase> purchases;
+    @OneToMany(mappedBy = "user", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    private List<Purchase> userPurchases;
+
 
 
     // Custom constructor

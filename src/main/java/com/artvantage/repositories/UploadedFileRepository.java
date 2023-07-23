@@ -1,17 +1,10 @@
 package com.artvantage.repositories;
 
-import com.artvantage.entity.UploadedFile;
+import com.artvantage.entity.Content;
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface UploadedFileRepository {
+public interface UploadedFileRepository extends JpaRepository <Content, String>{
 
-    // Method to save the uploaded file details to a database
-    public default UploadedFile save(UploadedFile uploadedFile) {
-        // Implementation to save the uploaded file to a database
-        // For example, using JPA or other data access mechanisms
-        return uploadedFile;
-    }
-
-    // Other repository methods as needed
 }

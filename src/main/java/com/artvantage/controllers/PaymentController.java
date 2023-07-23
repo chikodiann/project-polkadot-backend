@@ -66,7 +66,7 @@ public class PaymentController {
     ) {
         // Process the payment notification and update the backend to approve the purchase
         try {
-            boolean isPaymentSuccessful = contentService.processPaymentNotification(transactionId, amount, paymentMethod);
+            boolean isPaymentSuccessful = contentService.processPaymentNotification();
 
             if (isPaymentSuccessful) {
                 // Return a success response if the payment was successfully processed

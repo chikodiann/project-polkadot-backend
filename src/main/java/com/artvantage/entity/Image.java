@@ -1,21 +1,22 @@
 package com.artvantage.entity;
 
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 import jakarta.persistence.Table;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.RequiredArgsConstructor;
+import lombok.*;
 
 @AllArgsConstructor
-@RequiredArgsConstructor
+@NoArgsConstructor
+@Builder
 @Data
 @Entity
 @Table(name = "images")
 @EqualsAndHashCode(callSuper = true)
 public class Image extends Content {
+
+    @Id
+    @Column(name = "content_id")
     private String contentId;
 
     @Column(nullable = false)
@@ -23,17 +24,9 @@ public class Image extends Content {
 
     @Column(nullable = false)
     private int height;
+
     @Column(nullable = false, columnDefinition = "VARCHAR")
     private String imageSpecificAttribute;
-
-    // Getter and setter for videoSpecificAttribute
-    public String getVideoSpecificAttribute() {
-        return (String) imageSpecificAttribute;
-    }
-
-    public void setImageSpecificAttribute(String videoSpecificAttribute) {
-        this.imageSpecificAttribute = videoSpecificAttribute;
-    }
 
     @Override
     public Object getSpecificAttribute() {
@@ -42,8 +35,6 @@ public class Image extends Content {
 
     @Override
     public void setSpecificAttribute(String specificAttribute) {
-
+        this.imageSpecificAttribute = specificAttribute;
     }
 }
-
-

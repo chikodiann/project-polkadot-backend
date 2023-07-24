@@ -11,13 +11,10 @@ import java.util.List;
 public class UserPurchaseService {
     private final UserPurchaseRepository userPurchaseRepository;
 
-    @Autowired
     public UserPurchaseService(UserPurchaseRepository userPurchaseRepository) {
         this.userPurchaseRepository = userPurchaseRepository;
     }
 
-//    public List<UserPurchase> getAllPurchasesByWalletAddress(String walletAddress) {
-//        return userPurchaseRepository.findAllByUser_WalletAddress(walletAddress);
-//    }
 }
+
 

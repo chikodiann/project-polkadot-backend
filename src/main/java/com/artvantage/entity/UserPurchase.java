@@ -2,17 +2,21 @@ package com.artvantage.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.IdClass;
 import lombok.*;
 
-import java.io.Serializable;
-@Entity
 @AllArgsConstructor
-public class UserPurchase implements Serializable {
+@NoArgsConstructor
+@Entity
+@IdClass(UserPurchaseId.class) // Add this annotation to indicate the composite key class
+public class UserPurchase {
 
     @Id
     private String userId;
 
-    public UserPurchase() {
-    }
+    @Id
+    private String contentId;
 
+    // Add other attributes and relationships as needed
+    // ...
 }

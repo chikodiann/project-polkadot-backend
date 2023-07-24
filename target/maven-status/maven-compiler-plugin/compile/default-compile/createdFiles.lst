@@ -46,7 +46,6 @@ com/artvantage/repositories/CategoryRepository.class
 com/artvantage/exceptions/NotFoundException.class
 com/artvantage/request/SignupRequest$SignupRequestBuilder.class
 com/artvantage/DTO/UserDTO$UserDTOBuilder.class
-com/artvantage/DemoApplication.class
 com/artvantage/entity/Audio$AudioBuilder.class
 com/artvantage/services/PurchaseService.class
 com/artvantage/DTO/SearchResultItemDto.class

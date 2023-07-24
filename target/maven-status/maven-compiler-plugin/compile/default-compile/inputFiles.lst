@@ -14,7 +14,6 @@
 /Users/user/Desktop/project-polkadot-backend/src/main/java/com/artvantage/entity/PDF.java
 /Users/user/Desktop/project-polkadot-backend/src/main/java/com/artvantage/services/ContentService.java
 /Users/user/Desktop/project-polkadot-backend/src/main/java/com/artvantage/repositories/ContentRepository.java
-/Users/user/Desktop/project-polkadot-backend/src/main/java/com/artvantage/DemoApplication.java
 /Users/user/Desktop/project-polkadot-backend/src/main/java/com/artvantage/entity/Category.java
 /Users/user/Desktop/project-polkadot-backend/src/main/java/com/artvantage/services/CategoryService.java
 /Users/user/Desktop/project-polkadot-backend/src/main/java/com/artvantage/repositories/UserPurchaseRepository.java
@@ -23,6 +22,7 @@
 /Users/user/Desktop/project-polkadot-backend/src/main/java/com/artvantage/controllers/ContentController.java
 /Users/user/Desktop/project-polkadot-backend/src/main/java/com/artvantage/services/BlockchainServiceImpl.java
 /Users/user/Desktop/project-polkadot-backend/src/main/java/com/artvantage/enums/ContentType.java
+/Users/user/Desktop/project-polkadot-backend/src/main/java/com/artvantage/ArtvantageApplication.java
 /Users/user/Desktop/project-polkadot-backend/src/main/java/com/artvantage/entity/User.java
 /Users/user/Desktop/project-polkadot-backend/src/main/java/com/artvantage/exceptions/UserAlreadyExistsException.java
 /Users/user/Desktop/project-polkadot-backend/src/main/java/com/artvantage/entity/UserPurchase.java
